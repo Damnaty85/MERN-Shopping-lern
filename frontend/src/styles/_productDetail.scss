@@ -1,0 +1,199 @@
+.product {
+  &-screen {
+    display: grid;
+    grid-template-columns: 800px 500px;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__left {
+      width: 100%;
+    }
+
+    &__gallery {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &__image {
+      max-width: 600px;
+      width: 100%;
+      height: 800px;
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__thumbs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 30px;
+      overflow-y: auto;
+      height: 800px;
+      padding-right: 5px;
+
+      & img {
+        width: 130px;
+        height: auto;
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__detail-info {
+      box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      padding: 10px;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.87);
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: #fff;
+      min-width: 400px;
+    }
+
+    &__top {
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #a9a9a959;
+
+      & h3 {
+        font-size: 16px;
+      }
+    }
+
+    &__rating {
+      font-size: $additional-font-size;
+      margin-top: 5px;
+      width: 100%;
+      text-align: right;
+      color: rgb(109, 109, 109);
+    }
+
+    &__description {
+      & ul {
+        list-style-type: none;
+        width: 100%;
+        background-color: #fff;
+        margin: 10px 0 20px;
+        font-size: 13px;
+
+        & li {
+          width: 100%;
+          display: flex;
+          position: relative;
+          box-sizing: border-box;
+          text-align: left;
+          align-items: center;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          justify-content: space-between;
+          text-decoration: none;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #e8e8e8;
+          }
+          &:not(:first-child) {
+            padding-top: 7px;
+          }
+
+          & b {
+            display: block;
+            width: 120px;
+          }
+        }
+
+        & p {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__quantity {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & button {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        min-width: 30px;
+
+        & span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.disabled {
+          box-shadow: none;
+          background-color: rgba(0, 0, 0, 0.12);
+          pointer-events: none;
+
+          & svg {
+            color: rgba(0, 0, 0, 0.26);
+          }
+        }
+      }
+
+      & b {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+
+    &__pre-order {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-top: 1px dashed #a9a9a959;
+      padding-top: 10px;
+      border-bottom: 1px dashed #a9a9a959;
+      padding-bottom: 10px;
+
+      & p {
+        & span {
+          margin-left: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__order {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & button {
+        font-size: 10px;
+
+        &.disabled {
+          color: rgba(0, 0, 0, 0.26);
+          box-shadow: none;
+          background-color: rgba(0, 0, 0, 0.12);
+          pointer-events: none;
+        }
+      }
+    }
+    &__shipping {
+      margin-top: 25px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 2px;
+      font-size: 13px;
+      & h3 {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
